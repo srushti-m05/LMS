@@ -1,0 +1,368 @@
+/* ==== GLOBAL RESET ==== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ===== NAVBAR DESIGN ===== */
+.navbar {
+  width: 100%;
+  background: #1f1f28;
+  padding: 14px 25px;
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+/* Navbar Links */
+.navbar a {
+  color: #ffffffcc;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 500;
+  transition: 0.25s;
+  position: relative;
+}
+
+/* Hover underline animation */
+.navbar a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  height: 2px;
+  width: 0;
+  background: #4d63ff;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: #ffffff;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+
+/* Special Logout Styling */
+.navbar a:last-child {
+  color: #ff7676;
+  font-weight: 600;
+}
+
+.navbar a:last-child:hover {
+  color: #ff4f4f;
+}
+
+/* === HOME PAGE LAYOUT === */
+.container {
+  margin-top: 90px;                 /* space below navbar */
+  text-align: center;
+  color: #000000;
+  padding: 20px;
+}
+
+.container h2 {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #000000;
+  text-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+}
+
+.container p {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+/* soft glow panel effect (optional) */
+.container {
+  max-width: 700px;
+  margin: 120px auto 0;
+  background: rgba(255,255,255,0.08);
+  padding: 35px;
+  border-radius: 18px;
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.2);
+  box-shadow: 0px 10px 30px rgba(0,0,0,0.25);
+  animation: fadeIn 0.6s ease;
+}
+
+/* Fade Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== SUBJECT PAGE ===== */
+/* ===== TOPIC PAGE (WIDE READING LAYOUT) ===== */
+/* ===== TOPIC PAGE – FULL WIDTH CONTENT ===== */
+.topic-container {
+  width: 92%;                 /* 🔥 almost full screen */
+  max-width: 1400px;          /* large screens safe limit */
+  margin: 120px auto 60px;
+  padding: 50px 60px;
+
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(8px);
+  border-radius: 22px;
+
+  color: #000000;
+  text-align: left;
+  line-height: 1.8;
+
+  box-shadow: 0 15px 45px rgba(0,0,0,0.28);
+}
+
+/* Title */
+.topic-container h2 {
+  font-size: 34px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* Notes text */
+.topic-notes {
+  max-width: 1200px;
+  margin: auto;
+  white-space: pre-line;
+  font-size: 18px;
+}
+
+
+/* Video heading */
+.topic-container h3 {
+  margin: 30px 0 15px;
+  font-size: 24px;
+  text-align: center;
+}
+
+/* Video frame */
+.topic-container iframe {
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+
+.container h2 {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #000000;
+  text-shadow: 0 0 8px rgba(0,0,0,.2);
+}
+
+/* wrap cards in grid */
+.container {
+  max-width: 900px;
+  margin: 120px auto 0;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Card design */
+.card {
+  background: rgba(255,255,255,.15);
+  backdrop-filter: blur(10px);
+  padding: 18px;
+  margin: 12px 0;
+  border-radius: 12px;
+  font-size: 19px;
+  font-weight: 500;
+  color: #000000;
+  cursor: pointer;
+  transition: .3s;
+  border: 1px solid rgba(255,255,255,.25);
+}
+
+/* Hover animation */
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0,0,0,.3);
+  background: rgba(255,255,255,.25);
+}
+
+/* Remove blue underline on link */
+.card a, 
+.container a {
+  text-decoration: none;
+}
+
+/* Grid layout ready for more cards */
+.container > a {
+  display: block;
+}
+
+/* ===== NOTES PAGE ===== */
+.notes-container {
+  max-width: 900px;
+  margin: 120px auto 0;
+  text-align: center;
+  padding: 25px;
+  color: #000000;
+  animation: fadeIn .6s ease-out;
+}
+
+.notes-container h2 {
+  margin-bottom: 18px;
+  font-size: 30px;
+  font-weight: 600;
+  text-shadow: 0px 3px 6px rgba(0,0,0,.3);
+}
+
+/* Notes Textarea Box */
+.notes-box {
+  width: 100%;
+  height: 320px;
+  padding: 14px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(8px);
+  border: 1.8px solid rgba(255,255,255,0.25);
+  font-size: 16px;
+  color: #000000;
+  outline: none;
+  resize: vertical;
+  transition: .3s;
+}
+
+.notes-box:focus {
+  border-color: #4d63ff;
+  box-shadow: 0 0 8px rgba(77,99,255,.45);
+}
+
+/* Save Button */
+.notes-btn {
+  margin-top: 18px;
+  padding: 12px 26px;
+  font-size: 17px;
+  font-weight: 600;
+  background: #4d63ff;
+  color: #000000;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.notes-btn:hover {
+  background: #3a4cd3;
+  transform: translateY(-2px);
+}
+
+/* ==== FULL PAGE BACKGROUND ==== */
+body {
+  background: linear-gradient(135deg, #6b7aff, #9cc4ff);
+  min-height: 100vh;        /* use min-height instead of height */
+  overflow-y: auto;         /* allow scrolling */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;  /* prevents shrinking */
+}
+
+/* ==== MAIN AUTH WRAPPER ==== */
+.auth-container,
+.login-wrapper {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ==== AUTH CARD ==== */
+.auth-box,
+.login-box {
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(6px);
+  width: 380px;
+  padding: 40px 34px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0px 10px 40px rgba(0,0,0,0.20);
+  animation: fadeIn 0.6s ease;
+}
+
+/* CARD HEADING */
+.auth-box h2,
+.login-box h2 {
+  margin-bottom: 22px;
+  font-size: 27px;
+  color: #111;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+/* ==== INPUT STYLING ==== */
+.auth-box input,
+.login-box input {
+  width: 100%;
+  padding: 14px;
+  margin: 12px 0;
+  border-radius: 10px;
+  border: 1.7px solid #d8d8d8;
+  font-size: 16px;
+  transition: .25s;
+}
+
+.auth-box input:focus,
+.login-box input:focus {
+  border-color: #4d63ff;
+  box-shadow: 0px 0px 6px rgba(77,99,255,.45);
+  outline: none;
+}
+
+/* ==== BUTTON ==== */
+.auth-box button,
+.login-box button {
+  width: 100%;
+  padding: 13px;
+  background: #4d63ff;
+  border: none;
+  color: white;
+  border-radius: 10px;
+  font-size: 17px;
+  cursor: pointer;
+  margin-top: 14px;
+  transition: 0.25s;
+  font-weight: 500;
+}
+
+.auth-box button:hover,
+.login-box button:hover {
+  background: #3d4fd5;
+  transform: translateY(-2px);
+}
+
+/* ==== LINK TEXT ==== */
+.auth-box p,
+.login-box p {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #555;
+}
+
+.auth-box p span,
+.login-box p span {
+  color: #4d63ff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.auth-box p span:hover,
+.login-box p span:hover {
+  text-decoration: underline;
+}
+
+/* ==== Fade Animation ==== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
