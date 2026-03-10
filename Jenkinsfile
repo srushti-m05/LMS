@@ -25,5 +25,11 @@ pipeline {
       }
     }
 
+    stage('') {
+      steps {
+        sh 'echo "Pipeline is running successfully"'
+      }
+    }
+
   }
 }
