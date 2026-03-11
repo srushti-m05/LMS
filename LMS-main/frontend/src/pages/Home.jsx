@@ -9,7 +9,7 @@ export default function Home() {
       <Navbar />
       <div className="container">
         <h2>Welcome, {name}!</h2>
-        <p>Select a subject and start learning.</p>
+        <p>Select a subject and let's start learning .</p>
       </div>
     </>
   );
